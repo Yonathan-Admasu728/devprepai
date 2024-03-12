@@ -1,0 +1,151 @@
+.container {
+  /* background: linear-gradient(135deg, #120318, #0d0f27); */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.header, .menu, .links, .newsletter {
+  flex: 1;
+  padding: 20px;
+  max-width: calc(25% - 40px); /* 25% of the container width minus padding */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.header {
+  max-width: calc(20% - 40px); /* Adjust this value as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .description {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.images img {
+  margin: 0 1.5rem; /* Adds 5px of space to the left and right of each image */
+  margin-top: 1rem;
+}
+
+.logo {
+  text-align: center;
+}
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.newsletter input[type="email"] {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletterButton {
+  background-color: #fcbc5a;
+  color: #111; /* Text color, adjust as needed */
+  border: none; /* Removes default border */
+}
+
+.footer {
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+
+/* Existing styles... */
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  padding: 5px 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.menuItem:hover {
+  text-decoration: underline;
+}
+
+.newsletterButton {
+  background-color: #fcbc5a;
+  color: #111;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Add any additional styles as needed */
+
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .header, .menu, .links, .newsletter {
+    max-width: calc(33.33% - 40px); /* Adjust to 3 columns */
+  }
+}
+
+@media (max-width: 992px) {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .header, .menu, .links, .newsletter {
+    max-width: calc(50% - 40px); /* Adjust to 2 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .header, .menu, .links, .newsletter {
+    max-width: 100%; /* Stack all columns vertically */
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background: rgba(219, 208, 208, 0.3);
+  border-radius: 20px; /* Rounded corners like flashcards */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+
+  border: 2px solid rgba(224, 224, 224, 0.5); /* Subtle border with transparency */
+  backdrop-filter: blur(10px); /* Optional: Apply a blur effect to the background */
+}
+
+.section {
+  align-items: center;
+  border-radius: 10px;
+  align-self: stretch;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 22px 20px;
+  color: #333; /* Consistent text color */
+}
+
+.item {
+  align-items: center;
+  border-radius: 12px;
+  align-self: center;
+  display: flex;
+  width: 64px;
+  max-width: 100%;
+  flex-direction: column;
+}
+
+.lazyImage {
+  aspect-ratio: 0.89;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  overflow: hidden;
+  align-self: center;
+}
+
+.title {
+  color: #333; /* Consistent text color */
+  align-self: stretch;
+  margin-top: 16px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  margin-top: 0;
+  text-shadow: none; /* Cleaner look without shadow */
+}
+
+@media (max-width: 991px) {
+  .title {
+    white-space: initial;
+  }
+}
+
+.frameworks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.framework {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 calc(48% - 10px);
+  margin: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 15px; 
+  background: linear-gradient(135deg, #0f6f4a 0%, #4e0e6c 100%); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.frameworkName {
+  color: white; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.heroTitle {
+  color: #1a202c;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; 
+  font-size: 2.5rem; 
+  font-weight: 800; 
+  line-height: 1.2;
+  margin: 1rem 0;
+  text-transform: uppercase; 
+  letter-spacing: 1.5px; 
+}
+
+.heroSubtitle {
+  color: #4a5568; 
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem; 
+  font-weight: 400; 
+  line-height: 1.6;
+  margin-bottom: 2rem; 
+  padding: 0 2rem;
+  text-transform: none; 
+}
+
+.reactFramework {
+  flex: 0 0 100%;
+}
+
+@media (max-width: 320px) {
+  .framework {
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.framework:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px); /* Subtle lift effect */
+}

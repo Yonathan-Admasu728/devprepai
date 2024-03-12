@@ -1,0 +1,151 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 15px;
+  /* background-image: linear-gradient(90deg, rgba(13, 18, 36) 0%, #131337 35%, rgba(13, 18, 36) 100%); */
+}
+
+.featureSection {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #FFFFFF; 
+}
+
+.title {
+  font-size: 3rem; 
+  color: #58A6FF; 
+  margin-bottom: 1em;
+}
+
+.keyColor {
+  color: #58A6FF; 
+}
+
+.description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 2rem auto; 
+}
+
+.featuresGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; 
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px; 
+}
+
+.featureItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.featureContent {
+  flex-basis: 50%;
+  padding: 0 30px;
+  text-align: left; 
+}
+
+.featureTitle {
+  font-size: 2.2rem; 
+  margin-bottom: 20px;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6; 
+}
+
+.checkIcon {
+  color: blue; 
+  margin-bottom: 10px; 
+  font-size: x-large;
+}
+
+.ctaButtonContainer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.ctaButton {
+  font-size: 1.2rem;
+  background-color: #58A6FF; 
+  color: #0D1224; 
+
+  margin-top: 2rem; 
+  border: none; 
+  border-radius: 0.3rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  padding: 1.25rem 2.5rem; 
+  font-size: 1.3rem; 
+  background-image: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .featureItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featureItem img {
+    max-width: 100%; /* Full width on medium screens */
+  }
+
+  .featureContent {
+    order: 1; /* Text first on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .featureItem {
+    flex-direction: column;
+  }
+
+  .featureContent,
+  .featureItem:nth-child(even) {
+    order: 1; /* Ensure text is above the image */
+  }
+
+  .featureContent {
+    padding: 0 15px; /* Adjust padding for small screens */
+  }
+}
+
+
+
+/* Ensure the image container has a defined size that works with your layout */
+.featureItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem; 
+}
+
+
+.featureItem img {
+  transition: transform 0.2s; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+  width: 100%;
+  max-width: 600px; 
+  height: auto;
+  object-fit: cover; 
+  border-radius: 10px;
+}
+
+.featureItem img:hover {
+  transform: scale(1.1); /* Slight increase in scale */
+}
+

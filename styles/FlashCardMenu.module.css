@@ -1,0 +1,403 @@
+/* FlashCardMenu.module.css */
+
+.container {
+  background:  #e3eefc;
+  /* background: hsl(0, 0%, 20%) !important;  */
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Center the container */
+  padding-top: 2em; /* Add padding on top */
+  transform: 0.3s ease;
+  position: relative;
+}
+
+
+
+/* Dark mode styles */
+.container.dark {
+  background: #333;
+  color: #e3eefc;
+}
+
+/* Apply dark mode styles for other elements similarly */
+.dark .heroTitle,
+.dark .heroSubtitle {
+  color: #e3eefc; /* Ensure text is readable in dark mode */
+}
+
+.dark .framework {
+  background: rgb(0, 0, 39); /* Dark mode background for frameworks */
+  color: #e3eefc; /* Dark mode text color for frameworks */
+}
+
+
+.dark .frameworkTitle {
+  color: #fff; 
+}
+
+
+
+.dark .searchInput {
+  background: #2a2a2a; /* Dark mode background for input */
+  color: #e3eefc; /* Dark mode text color for input */
+  border-color: #555; /* Dark mode border color for input */
+}
+
+.dark .imageContainer {
+  background: rgba(0, 0, 0, 0.2); 
+}
+
+.themeToggleContainer {
+  position: absolute; 
+  top: -8px;
+  right: -8px;
+  padding: 10px;
+  /* z-index: 1000;  */
+}
+
+.themeToggleButton {
+  cursor: pointer;
+  /* background: #eee; */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Dark mode specific styles */
+.dark .themeToggleButton {
+  background: #333; /* Darker background for the button in dark mode */
+  color: #fff; /* Light text color for dark mode */
+}
+
+
+.heroTitle,
+.heroSubtitle {
+  text-align: center; /* Center the text */
+  margin: 0 auto; /* Center block elements */
+  padding: 0.5em 0; /* Add some padding above and below the text */
+}
+
+.heroTitle {
+  font-size: 2.4rem; /* Adjust size as needed */
+  color: #123456; /* Use your primary color */
+  text-align: center; /* Center the title */
+  margin-bottom: 0.5rem; /* Add some space below the title */
+  font-weight: 600; /* Make the title bold */
+}
+
+.heroSubtitle {
+  font-size: 1.4rem; /* Adjust size as needed */
+  color: #666666; /* A softer color for the subtitle */
+  text-align: center; /* Center the subtitle */
+  margin-bottom: 1rem; /* Space before the flashcard grid starts */
+}
+
+.highlight {
+  color: #FFA500; /* A highlight color that stands out */
+  font-weight: 600; /* Slightly bolder than normal text */
+}
+
+
+
+.frameworks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  gap: 4em;
+  place-items: center;
+}
+
+.frameworks > h2 {
+  grid-column: 1 / -1; 
+  text-align: center;
+  font-size: 2em;
+  margin: 0.5em 0;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+
+.framework {
+  background: sparkly linear-gradient(160deg, #c0c0c0 0%, #ffffff 50%, #5f7a7d 100%); 
+  border-radius: 8px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.framework:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.searchInput {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #333;
+  background:  #e3eefc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+
+.imageContainer {
+  position: relative;
+  height: 150px; 
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white for frosted glass effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 8px; /* Rounded corners */
+  padding: 40px; /* Spacious padding */
+  margin: 20px; /* Separate from the edges of the carousel */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%; /* Maximum width */
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid turquoise;
+}
+
+.frameworkTitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem; /* Large, readable font size */
+  font-weight: 700; /* Bold weight */
+  color: #333; 
+  margin-bottom: 1rem;
+}
+
+.contentAreaDescription {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400; /* Regular weight */
+  color: #555; /* Slightly lighter for hierarchy */
+  margin-bottom: 2rem;
+}
+
+.expandButton {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500; /* Medium weight */
+  color: white;
+  background: linear-gradient(45deg, #6dd5ed, #2193b0); 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.expandButton:hover {
+  transform: translateY(-2px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .frameworkTitle {
+    font-size: 4vw; 
+  }
+
+  .frameworkDescription {
+    font-size: 3.5vw;
+  }
+
+  .expandButton {
+    font-size: 3.5vw;
+    padding: 10px 10%;
+  }
+}
+
+/* Mobile specific styles */
+@media (max-width: 480px) {
+
+  .framework {
+    padding: 8px;
+  }
+
+  .imageContainer {
+    width: 100%;
+   padding: 30px;
+  }
+
+  .frameworkInfoOverlay {
+    padding-top: 15%;
+  }
+
+  .frameworkTitle {
+    font-size: 5vw; 
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .frameworkDescription {
+    font-size: 4vw; 
+    line-height: 1.2; 
+  }
+
+
+  .expandButton {
+    font-size: 4.5vw; 
+    padding: 12px 24px;
+    color: #000;
+  }
+
+ 
+}
+
+
+
+
+.completionMessage {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.completionText {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.completionButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 10px;
+}
+
+.returnToMenuButton {
+  background: linear-gradient(45deg, #2193b0, #6dd5ed);
+  color: #fff;
+}
+
+.restartFlashcardsButton {
+  background: linear-gradient(45deg, #6dd5ed, #2193b0);
+  color: #fff;
+}
+
+.completionButton:hover {
+  transform: translateY(-2px);
+}
+
+.returnToMenuButton:hover {
+  background-color: #0056b3;
+}
+
+.restartFlashcardsButton:hover {
+  background-color: #218838;
+}
+
+.completionButton:active {
+  transform: translateY(1px);
+}
+
+
+.progressBarBackground {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progressBarForeground {
+  height: 5px;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+
+.techListFullWidthWrapper {
+  grid-column: 1 / -1;
+  width: 100%; 
+  display: block; 
+  padding: 2rem 0;
+  margin: 2rem 0; 
+}
+
+.carouselwraper {
+  display: flex; 
+  width: 100%;
+  padding: 2rem 0;
+  margin: 1rem 0; 
+}
+
+
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .frameworks {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 1rem;
+  }
+
+  .framework {
+    padding: 8px;
+  }
+
+  .searchInput {
+    padding: 8px;
+  }
+
+  .imageContainer {
+    height: 150px;
+  }
+
+  .heroTitle {
+    font-size: 1.5em; 
+  }
+  .heroSubtitle {
+    font-size: 1em; 
+  }
+  
+
+}
+
+
+
+
+
+/* Additional style for icons if you add them */
+.valueIcon {
+  display: inline-block;
+  margin-right: 0.5rem; /* Space before the text */
+  vertical-align: middle; /* Align with the text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroSubtitle {
+    font-size: 1.25rem; /* Slightly smaller on mobile */
+  }
+}
+
+
+
+
+
+
+

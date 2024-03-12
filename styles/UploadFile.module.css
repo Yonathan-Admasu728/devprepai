@@ -1,0 +1,142 @@
+.uploadContainer {
+  background: linear-gradient(145deg, #e6feff, #b2e5e5);
+  border: 1px solid #b2e5e5;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadContainer:hover {
+  transform: translateY(-5px);
+}
+
+.uploadPrompt {
+  color: #026670;
+  font-size: 2rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.selectFileButton {
+  background-color: #9df9ef;
+  color: #026670;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+}
+
+.selectFileButton:hover {
+  background-color: #4dd0e1;
+  box-shadow: 0px 4px 8px rgba(77, 208, 225, 0.5);
+}
+
+.cardHeader {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploadImageContainer {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  transition: background-color 0.3s;
+  width: 250px;
+  height: 250px;
+  margin-top: 2rem;
+}
+
+.uploadImageContainer:hover {
+  background-color: #b2dfdb;
+}
+
+.websocketStatus {
+  color: #5e5e5e;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.statusDot {
+  height: 10px;
+  width: 10px;
+  margin-right: 8px;
+}
+
+.statusIcon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #026670;
+}
+
+.progressBar {
+  background-color: #00acc1;
+  line-height: 24px;
+  border-radius: 20px;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+
+.uploadContainer.dark {
+  background: #263238; /* Dark background for dark mode */
+  border: 1px solid #37474f; /* Darker border for contrast */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+}
+
+.dark .uploadPrompt {
+  color: #80deea; 
+}
+
+
+.dark .selectFileButton {
+  background-color: #00838f; /* Darker turquoise for the button */
+  color: #e0f7fa; /* Light text for contrast */
+}
+
+.dark .selectFileButton:hover {
+  background-color: #00acc1; /* Brighter turquoise on hover */
+  box-shadow: 0px 4px 8px rgba(0, 172, 193, 0.5);
+}
+
+
+
+.dark .uploadImageContainer {
+  background-color: #102027; /* Dark surface for the image container */
+}
+
+.dark .uploadImageContainer:hover {
+  background-color: #37474f; /* Slightly lighter on hover for feedback */
+}
+
+.dark .websocketStatus {
+  color: #cfd8dc; /* Light color for text for readability */
+}
+
+.dark .statusDot,
+.dark .statusIcon {
+  color: #80deea; /* Turquoise dots or icons for visibility */
+}
+
+.dark .progressBar {
+  background-color: #00acc1; /* Keep turquoise progress for consistency */
+}
+
+.dark .progressContainer {
+  background-color: #37474f; /* Darker container for progress bar */
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "tech_name": "react",
+        "frameworkKey": "react"
+    },
+    {
+        "tech_name": "next",
+        "frameworkKey": "next"
+    },
+    {
+        "tech_name": "algo-py",
+        "frameworkKey": "algo-py"
+    },
+    {
+        "tech_name": "algo-js",
+        "frameworkKey": "algo-js"
+    },
+    {
+        "tech_name": "vue-js",
+        "frameworkKey": "vue-js"
+    },
+    {
+        "tech_name": "java",
+        "frameworkKey": "java"
+    },
+    {
+        "tech_name": "angular-js",
+        "frameworkKey": "angular-js"
+    },
+    {
+        "tech_name": "bun",
+        "frameworkKey": "bun"
+    },
+    {
+        "tech_name": "node",
+        "frameworkKey": "node"
+    },
+    {
+        "tech_name": "algo-p2",
+        "frameworkKey": "algo-p2"
+    },
+    {
+        "tech_name": "vue-js",
+        "frameworkKey": "vue-js"
+    },
+    {
+        "tech_name": "angular-js",
+        "frameworkKey": "angular-js"
+    },
+    {
+        "tech_name": "py-data",
+        "frameworkKey": "py-data"
+    },
+    {
+        "tech_name": "machine-l",
+        "frameworkKey": "machine-l"
+    },
+    {
+        "tech_name": "django",
+        "frameworkKey": "django"
+    }
+]

@@ -1,0 +1,53 @@
+.card {
+  background: linear-gradient(160deg, #c0c0c0 0%, #ffffff 50%, #5f7a7d 100%);
+  /* background: linear-gradient(160deg, #ffffff 0%, #c0c0c0 50%, #5f7a7d 100%); */
+
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.thumbnailItem:hover .card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Match thumbnailItem box-shadow */
+  transform: translateY(-5px); /* Match thumbnailItem transform */
+}
+
+.title {
+  margin: 10px 0 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase; /* Transform text to uppercase */
+  white-space: nowrap; /* Keep text on a single line */
+  overflow: hidden; /* Prevent text from overflowing */
+  text-overflow: ellipsis; /* Add an ellipsis if the text is too long to fit */
+  max-width: 100%; /* Ensure the title does not exceed the card width */
+  padding: 0 10px; /* Add some padding on the sides if needed */
+  font-size: 1rem; /* Adjust the font size to fit the text in one line, if necessary */
+  line-height: 1.2; /* Adjust line height to ensure proper spacing */
+}
+
+.grid {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3px;
+}
+
+.dot {
+  background-color: violet;
+  border-radius: 50%;
+  place-self: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  background-color: #ff5370;
+}

@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: url("/high.png") center center / cover no-repeat; 
+  color: #ffffff;
+  text-align: center;
+  position: relative; 
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(13, 18, 36, 0.85);
+  z-index: 1;
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 2;
+  max-width: 750px; /* Limiting content width for better readability on large screens */
+  padding: 0 2rem; /* Padding on small screens */
+}
+
+.title {
+  font-weight: 800; 
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.titleHighlight {
+  background: linear-gradient(45deg, #58A6FF, #FFA726);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 800; 
+  font-size: 3.5rem;
+}
+
+.description {
+  font-size: 1.4rem; 
+  line-height: 1.8;
+  color: #E1E8ED; 
+  margin-bottom: 2rem; 
+  font-weight: 500;
+}
+
+.button {
+  font-size: 1.2rem;
+  background-color: #58A6FF; 
+  color: #0D1224; 
+
+  margin-top: 2rem; 
+  border: none; 
+  border-radius: 0.3rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  padding: 1.25rem 2.5rem; 
+  font-size: 1.3rem; 
+  background-image: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+}
+
+.button:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .contentContainer {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+  .titleHighlight {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .titleHighlight {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

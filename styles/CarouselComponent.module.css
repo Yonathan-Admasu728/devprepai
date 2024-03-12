@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;900&display=swap');
+
+.carousel {
+  background: url('/ast-01.png') no-repeat center / cover;
+  border-radius: 1rem;
+  width: 100vw;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  transition: all 0.3s ease-in-out; 
+  
+}
+
+.carousel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  ); 
+  border-radius: 2rem; 
+  pointer-events: none; 
+}
+
+
+.slide, .slideActive {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.slideActive {
+  will-change: transform, opacity;
+  animation: fadeIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+
+
+.thumbnailContainer {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 3.5rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+  overflow: hidden;
+  width: calc(150px * 4);
+}
+
+.thumbnailItem {
+  width: 150px;
+  height: 220px;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  border-radius: 20px;
+}
+
+.thumbnailItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnailItem img {
+  border-radius: 20px;
+}
+
+.thumbnailTitleOverlay {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.thumbnailItem:hover .thumbnailTitleOverlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.thumbnailTitle {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  user-select: none;
+}
+
+.thumbnailActive {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.75);
+}
+
+.frameworkPreviewContainer {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 9%;
+  bottom: 35%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  max-width: none;
+}
+@keyframes previewFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.frameworkPreviewContainer {
+  animation: previewFadeIn 0.5s ease-out forwards; 
+  will-change: opacity, transform; 
+}
+
+
+.arrows {
+  position: absolute;
+  top: 75%;
+  left: 20%;
+  display: flex;
+  gap: 20px;
+  padding: 0 1rem;
+  z-index: 100; 
+}
+
+.arrows button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #6dd5ed, #3ca5bf);
+  border: none;
+  color: #fff;
+  font-size: 2rem; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.arrows button:hover {
+  background: linear-gradient(45deg, #6dd5ed, #2193b0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    background: #CDDFF5;
+    height: 80vh;
+    margin-bottom: 10vh;
+  }
+
+  .title, .frameworkKey {
+    font-size: 0.5e,; 
+  }
+
+ 
+
+  .thumbnailContainer {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-20%);
+    width: 90%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .thumbnailItem {
+    min-width: 45%;
+    width: 45%;
+    margin-right: 0%;
+  }
+
+ 
+
+  .arrows {
+    bottom: 20%; 
+    top: auto;
+    left: 0;
+    gap: 10px;
+   
+  }
+
+  .arrows button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem; 
+  }
+
+  .frameworkPreviewContainer {
+    width: auto;
+    height: auto;
+    position: static;
+    padding: 0.5rem;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    margin-top: 0.5rem;
+  }
+}

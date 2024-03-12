@@ -1,0 +1,110 @@
+/* HowitWorks.module.css */
+
+.div {
+    background-color: #f7f8fa;
+    color: #404040;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+  }
+  
+  .div2 {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .div3 {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  
+  .div4 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #20232a;
+  }
+  
+  .div5 {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666666;
+  }
+  
+  .div6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .div8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  }
+  
+  .div9, .div11, .div13, .div15 {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ff6a00;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .div10, .div12, .div14 {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ddd;
+  }
+  
+  .column3, .column4, .column5, .column6, .column7, .column8, .column9, .column10 {
+    padding: 1rem;
+  }
+  
+  .Image, .img2, .img3, .img4 {
+    border-radius: 4px;
+  }
+  
+  .div21, .div28, .div35, .div42 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .div22, .div29, .div36, .div43 {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  /* Add any additional global styles, such as responsive breakpoints, here */
+  
+  @media (max-width: 768px) {
+    .div6 {
+      flex-direction: column;
+    }
+  
+    .div8 {
+      flex-direction: column;
+    }
+  
+    .div10, .div12, .div14 {
+      height: 0;
+      margin: 1rem 0;
+      display: none;
+    }
+  }
+  

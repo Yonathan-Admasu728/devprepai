@@ -1,26 +1,593 @@
-html,
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Import Fira Code from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+
+
+
+
+
+/* Global Styles */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg-color);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  /* --bg-color: #f5f5f5;
+  --card-bg-color: #ffffff;
+  --text-color: #f8f3f3; */
+  --button-bg-color: #333;
+  --button-hover-bg-color: #555;
+  --title-text-color: #f5f5f5;
+  --answer-text-color: #f5f5f5;
+
+  --progress-background-light: #dfebfb; /* Light background color for the progress circle */
+  --progress-border: #08aeea; /* Border color for the progress circle */
+  --accent-color: #08aeea; /* Update the accent color if needed */
+  --text-primary: #333; /* Update the primary text color if needed */
+
+   /* New Whitish-Bay Color */
+   /* --whitish-bay-color: #CDDFF5; */
+   --whitish-bay-color: #dfebfb;
+   --bg-color: var(--whitish-bay-color);
+   --card-bg-color: #fff;/* Consider keeping cards white or using a very light shade to contrast the background */
+   --text-color: #333; /* Ensure text color contrasts well with the lighter background */
 }
 
-* {
-  box-sizing: border-box;
+:root {
+  --progress-background-dark: #333; /* Dark mode background color for the progress circle */
+ --progress-border-dark: #08aeea;
+ --dark-bg-color: #282c34; /* Darker shade for background */
+ --dark-text-color: #c0c0c0; /* Lighter shade for text for better contrast */
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+body.dark-mode {
+  --bg-color: #333;
+  --card-bg-color: #444;
+  --text-color: #f5f5f5;
+  --button-bg-color: #555;
+  --button-hover-bg-color: #777;
+  --title-text-color: #f5f5f5;
+  --answer-text-color: #f5f5f5;
+  --progress-background: #777;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
+/* General Styles */
+/* General Styles */
+body, html {
+  /* margin: 0;
+  padding: 0; */
+  background: #0D1224;
+  /* background-image: linear-gradient(90deg, rgba(13, 18, 36) 0%, #131337 35%, rgba(13, 18, 36) 100%); */
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+
+
+.landingPageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* background-image: linear-gradient(90deg, #020118 0%, #03033e 35%, #000506 100%); */
+  background-image: linear-gradient(90deg, rgba(13, 18, 36) 0%, #131337 35%, rgba(13, 18, 36) 100%);
+  /* background-image: linear-gradient(90deg, #020118 0%, #0b0009 35%, #000506 100%); */
+
+  /* background: linear-gradient(90deg, #030022 0%,#190018  35%, #000022 100%); */
+
+}
+
+.logoNav {
+  padding-left: 2rem;
+}
+
+
+/* Assuming you have a sectionTitle class for your section titles */
+.sectionTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.5rem;
   }
-  body {
-    color: white;
-    background: black;
+}
+
+/* ... Other responsive styles ... */
+
+
+
+
+
+.getStartedButton,
+.googleSignInButton {
+  background: #064646;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.getStartedButton:hover,
+.googleSignInButton:hover {
+  background: #033333;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-7px);
+}
+
+
+/* How it Works Section */
+.howItWorksSection {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #064646;
+}
+
+
+
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .heroSection,
+  .featuresSection,
+  .howItWorksSection,
+  .testimonialsSection {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+/* flashcard menu styles */
+
+/* Container for both Flashcard Menu and Flashcard */
+/* .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #080000, #12011d);
+
+} */
+
+
+
+/* .flashcard-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #000000, #033b3b, #180018);
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+} */
+
+
+.flashcard-container {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.menu-title {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+
+.menu-description {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.button-group button {
+
+  background: linear-gradient(to bottom right, rgb(9, 158, 158), #190129, rgb(10, 151, 151)); 
+
+ 
+
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  transform: scale(1.3);
+  background: linear-gradient(to bottom right, cyan, #190129, cyan); 
+
+}
+
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .flashcard-menu-container {
+    padding: 10px;
+  }
+
+  .menu-title {
+    font-size: 24px;
+  }
+
+  .menu-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .button-group button {
+    flex: 0 0 calc(50% - 10px); /* 50% width and minus 10px for a little gap */
+    padding: 10px 5px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Add some margin to the bottom of each button */
+  }
+}
+
+
+
+
+/* App Container */
+/* .app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+ 
+  background: rgb(219, 208, 208);
+  
+  padding: 0.2rem;
+} */
+
+/* Header */
+/* .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  color: rgb(5, 147, 175);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header h4 {
+  margin-left: 10px;
+}
+
+.header h2 {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+} */
+
+/* Logout Button */
+/* button {
+  background: linear-gradient(to bottom right, #ff6b6b, #6a1b9a, #c64402);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom right, #7e4802, #d44903, #5d0303);
+} */
+
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  /* .app-container {
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .header .logo {
+    margin-bottom: 10px;
+  }
+
+  .header h2 {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  } */
+}
+
+
+
+/* Base styles for the quiz container */
+.quiz-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  width: 80%;
+  margin: 40px auto;
+  transition: background-color 0.3s;
+}
+
+/* Styles for correct/wrong answers */
+.bg-correct {
+  background-color: #e9f5f2; /* A soft green background */
+  color: #2c665d; /* A dark green text, for contrast */
+}
+
+.bg-wrong {
+  background-color: #fdf3f3; /* A soft red background */
+  color: #a33e3e; /* A dark red text, for contrast */
+}
+
+/* Quiz Question styles */
+.quiz-container h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Quiz Options styles */
+.quiz-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f7f7f7;
+  color: #333;
+}
+
+.quiz-button:hover {
+  background: #e2e2e2;
+  border-color: #c6c6c6;
+}
+
+/* Feedback styles */
+.feedback-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.feedback-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.feedback-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.feedback-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #5cb85c; /* Bootstrap's btn-success color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feedback-content button:hover {
+  background: #4cae4c; /* A darker shade for hover state */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .quiz-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .quiz-container h2 {
+    font-size: 20px;
+  }
+
+  .quiz-button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .feedback-content p {
+    font-size: 18px;
+  }
+
+  .feedback-content button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* interview master styles */
+
+.interview-master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interview-master h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.interview-master input[type="file"] {
+  margin-bottom: 20px;
+}
+
+
+
+.interview-master button:hover {
+  background-color: #0056b3;
+}
+
+.audio-button {
+  background: linear-gradient(to bottom right, cyan, #190129, cyan); 
+  color: #ffffff;
+  padding: 50px 75px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  line-height: normal;
+  height: auto;
+  font-size: 5em;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  border-radius: 50%;
+}
+
+.audio-button.recording {
+  background-color: #ff0000;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: cyan;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

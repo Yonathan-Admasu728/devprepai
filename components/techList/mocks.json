@@ -1,0 +1,60 @@
+[
+	{
+	  "slice_type": "techList",
+	  "variation": "default",
+	  "primary": {
+		"title": "Find flashcard on any of these topics"
+	  },
+	  "items": [
+		{
+		  "tech_name": "React",
+		  "tech_color": "#00D1F7"
+		},
+		{
+		  "tech_name": "Next.js",
+		  "tech_color": "#FFFFFF"
+		},
+		{
+		  "tech_name": "GSAP",
+		  "tech_color": "#88CE02"
+		},
+		{
+		  "tech_name": "Algorithms",
+		  "tech_color": "rgb(233, 153, 5)"
+		},
+		{
+		  "tech_name": "Django",
+		  "tech_color": "#092E20"
+		},
+		{
+		  "tech_name": "Python",
+		  "tech_color": "#3776AB"
+		},
+		{
+		  "tech_name": "Vue.js",
+		  "tech_color": "#4FC08D"
+		},
+		{
+		  "tech_name": "Angular",
+		  "tech_color": "rgb(237, 9, 9)"
+		},
+		{
+			"tech_name": "Flask",
+			"tech_color": "rgb(250, 250, 16"
+		  },
+		  {
+			"tech_name": "Docker",
+			"tech_color": "rgb(91, 91, 239)"
+		  },
+		  {
+			"tech_name": "Tailwindcss",
+			"tech_color": "rgb(4, 203, 203)"
+		  },
+		  {
+			"tech_name": "Bun",
+			"tech_color": "rgb(231, 133, 149)"
+		  }
+	  ]
+	}
+  ]
+  
